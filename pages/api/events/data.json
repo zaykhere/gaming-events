@@ -1,0 +1,70 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "name": "CSGO Tournament",
+      "slug": "csgo-tournament",
+      "venue": "Horizon Club",
+      "address": "919 3rd Ave New York, New York(NY), 10022",
+      "date": "June 09, 2022",
+      "time": "10:00 PM EST",
+      "description": "CSGO Tournament featuring 2 5-a side teams",
+      "image": "/images/events-1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "PUBG Tournament",
+      "slug": "pubg-tournament",
+      "venue": "Blackjacks",
+      "address": "966 Lexington Ave New York, New York(NY), 10021",
+      "date": "June 2, 2022",
+      "time": "8:00 PM EST",
+      "description": "PUBG Tournament featuring 2 5-a side teams",
+      "image": "/images/events-2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Valorant Tournament",
+      "slug": "valorant-tournament",
+      "venue": "Encore",
+      "address": "675 Water St New York, New York(NY), 10002",
+      "date": "June 11, 2022",
+      "time": "7:00 PM EST",
+      "description": "Valorant Tournament featuring 2 5-a side teams",
+      "image": "/images/events-3.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Jam Gaming Awards",
+      "slug": "jam-gaming-awards",
+      "venue": "Club Ozone",
+      "address": "70 W 115th St New York, New York(NY), 10026",
+      "date": "June 20, 2022",
+      "time": "10:00 PM EST",
+      "description": "JAM Annual Gaming Awards ",
+      "image": "/images/events-4.jpg"
+    },
+    {
+      "id": "5",
+      "name": "UnMute Gaming Awards",
+      "slug": "unmute-gaming-awards",
+      "venue": "Studio 54",
+      "address": "55 La Salle St #12K New York, New York(NY), 10027",
+      "date": "June 30, 2022",
+      "time": "8:00 PM EST",
+      "description": "Unmute Annual Gaming Awards",
+      "image": "/images/events-5.jpg"
+    },
+    {
+      "id": "6",
+      "name": "FIFA Tournament",
+      "slug": "fifa-tournament",
+      "venue": "Onyx Club",
+      "address": "60 Gramercy Park N #2 New York, New York(NY), 10010",
+      "date": "July 2, 2022",
+      "time": "8:00 PM EST",
+      "description": "FIFA Tournament featuring 8 players",
+      "image": "/images/events-6.jpg"
+    }
+  ]
+}
