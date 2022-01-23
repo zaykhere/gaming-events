@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Layout.module.css";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const Layout = ({ title, keywords, description, children }) => {
   return (
@@ -13,6 +14,7 @@ const Layout = ({ title, keywords, description, children }) => {
 
       <Header />
       <div className={styles.container}>{children}</div>
+      <Footer />
     </div>
   );
 };
