@@ -24,18 +24,18 @@ const EventPage = ({evt}) => {
                 </a>
           </div>
           <span>
-            {evt.date} at {evt.time}
+            {evt.attributes.date} at {evt.attributes.time}
           </span>
-          <h1> {evt.name} </h1>
+          <h1> {evt.attributes.name} </h1>
           {evt.image && (
             <div className={styles.image}> 
               <Image src={evt.image} width={960} height={600} />
             </div>
           )}
           <h3> Description: </h3>
-          <p> {evt.description} </p>
-          <h3> Venue: {evt.venue} </h3>
-          <p> {evt.address} </p>  
+          <p> {evt.attributes.description} </p>
+          <h3> Venue: {evt.attributes.venue} </h3>
+          <p> {evt.attributes.address} </p>  
 
           <Link href="/events">
             <a className={styles.back}>
@@ -51,7 +51,8 @@ export default EventPage;
 
 export async function getServerSideProps({query: {slug}}) {
   const res = await fetch(`${API_URL}/api/events/${slug}`);
-  const events = await res.json()
+  const eventsRes = await res.json()
+  const events = eventsRes.data;
 
   return {
     props: {evt: events[0]},

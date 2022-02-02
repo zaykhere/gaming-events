@@ -7,7 +7,7 @@ const EventItem = ({ evt }) => {
     <div className={styles.event}>
       <div className={styles.img}>
         <Image
-          src={evt.image ? evt.image : "images/events-1.jpg"}
+          src={evt.image? evt.image : '/images/events-1.jpg'}
           width={170}
           height={100}
         />
@@ -19,7 +19,7 @@ const EventItem = ({ evt }) => {
       </div>
 
       <div className={styles.link}>
-          <Link href={`/events/${evt.slug}`}>
+          <Link href={`/events/${evt.slug}/${evt.id}`}>
               <a className="btn"> Details </a>
           </Link>
       </div>

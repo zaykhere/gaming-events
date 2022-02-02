@@ -3,6 +3,7 @@ import EventItem from "../../components/EventItem";
 import { API_URL } from "../../config";
 
 const EventsPage = ({events}) => {
+  console.log(events[0].id);
   return (
       <Layout>
         <h1> Events </h1>
@@ -20,7 +21,8 @@ export default EventsPage;
 
 export async function getServerSideProps() {
   const res = await fetch(`${API_URL}/api/events`);
-  const events = await res.json()
+  const eventsRes = await res.json()
+  const events = eventsRes.data;
 
   return {
     props: {events},
