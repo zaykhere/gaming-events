@@ -10,6 +10,7 @@ const EventPage = ({evt}) => {
     console.log('delete event');
   }
 
+
   return (
       <Layout>
         <div className={styles.event}>
@@ -24,18 +25,18 @@ const EventPage = ({evt}) => {
                 </a>
           </div>
           <span>
-            {evt.attributes.date} at {evt.attributes.time}
+            {evt.date} at {evt.time}
           </span>
-          <h1> {evt.attributes.name} </h1>
+          <h1> {evt.name} </h1>
           {evt.image && (
             <div className={styles.image}> 
               <Image src={evt.image} width={960} height={600} />
             </div>
           )}
           <h3> Description: </h3>
-          <p> {evt.attributes.description} </p>
-          <h3> Venue: {evt.attributes.venue} </h3>
-          <p> {evt.attributes.address} </p>  
+          <p> {evt.description} </p>
+          <h3> Venue: {evt.venue} </h3>
+          <p> {evt.address} </p>  
 
           <Link href="/events">
             <a className={styles.back}>
@@ -49,12 +50,14 @@ const EventPage = ({evt}) => {
 
 export default EventPage;
 
-export async function getServerSideProps({query: {slug}}) {
-  const res = await fetch(`${API_URL}/api/events/${slug}`);
+export async function getServerSideProps(context) {
+  const slug = context.params.slug[0];
+  const id = context.params.slug[1];
+  const res = await fetch(`${API_URL}/api/events/${slug}/${id}`);
   const eventsRes = await res.json()
-  const events = eventsRes.data;
+  const event = eventsRes.evt;
 
   return {
-    props: {evt: events[0]},
+    props: {evt: event},
   }
 }
